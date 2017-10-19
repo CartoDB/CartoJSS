@@ -20,4 +20,24 @@ describe('serializer', function () {
 
     expect(actual).toEqual(expected);
   });
+
+  it('would serialize the example 2', function () {
+    var actual = serializer.serialize({
+      '#continent_points': {
+        'marker-fill-opacity': 0.9,
+        'marker-line-color': '#FFF',
+        'marker-placement': 'point',
+        'marker-allow-overlap': true,
+        '[continent="Africa"]': {
+          'marker-fill': '#A6CEE3'
+        },
+        '[continent="Antarctica"]': {
+          'marker-fill': '#1F78B4'
+        }
+      },
+    });
+    var expected = '#continent_points {\n  marker-fill-opacity: 0.9;\n  marker-line-color: #FFF;\n  marker-placement: point;\n  marker-allow-overlap: true;\n  [continent="Africa"] {\n    marker-fill: #A6CEE3;\n  }\n  [continent="Antarctica"] {\n    marker-fill: #1F78B4;\n  }\n}';
+
+    expect(actual).toEqual(expected);
+  });
 });

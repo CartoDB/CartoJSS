@@ -2,7 +2,7 @@
   "name": "cartojss",
   "version": "0.1.0",
   "description": "Serializer of CartoCSS javascript objects",
-  "main": "lib/serializer.js",
+  "main": "lib/cartojss.js",
   "author": "Jesús Arroyo Torrens <jarroyo@cartodb.com>",
   "repository": "https://github.com/Jesus89/CartoJSS",
   "license": "GPL-2.0",

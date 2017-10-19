@@ -4,7 +4,7 @@ Write CartoCSS using a Javascript object
 
 ## Usage
 ```javascript
-var serializer = require('serializer');
+var cartojss = require('cartojss');
 
 var style = {
   '@small': 3,
@@ -17,12 +17,10 @@ var style = {
   }
 }
 
-serializer.serialize(style);
+cartojss.serialize(style);
 ```
 
 ```
-/* Output Carto */
-
 @small: 3;
 @large: 6;
 #layer {

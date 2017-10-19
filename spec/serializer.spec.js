@@ -1,8 +1,8 @@
-var serializer = require('../lib/serializer.js');
+var cartojss = require('../lib/cartojss.js');
 
 describe('serializer', function () {
   it('would serialize correctly the example 1', function () {
-    var actual = serializer.serialize({
+    var actual = cartojss.serialize({
       '#continent_points': {
         'marker-fill-opacity': 0.9,
         'marker-line-color': '#FFF',
@@ -22,7 +22,7 @@ describe('serializer', function () {
   });
 
   it('would serialize correctly the example 2', function () {
-    var actual = serializer.serialize({
+    var actual = cartojss.serialize({
       '#continent_points': {
         'marker-fill-opacity': 0.9,
         'marker-line-color': '#FFF',
@@ -42,7 +42,7 @@ describe('serializer', function () {
   });
 
   it('would serialize correctly the example 3', function () {
-    var actual = serializer.serialize({
+    var actual = cartojss.serialize({
       '@africa': '#A6CEE3',
       '@antarctica': '#1F78B4',
       '#continent_points': {
@@ -64,7 +64,7 @@ describe('serializer', function () {
   });
 
   it('would serialize correctly the example 4', function () {
-    var actual = serializer.serialize({
+    var actual = cartojss.serialize({
       '#layer': {
         '::halo': {
           'marker-width': 20
@@ -78,7 +78,7 @@ describe('serializer', function () {
   });
 
   it('would serialize correctly the example 5', function () {
-    var actual = serializer.serialize({
+    var actual = cartojss.serialize({
       '#layer': {
         'marker-width': 3,
         '[zoom = 4]': {

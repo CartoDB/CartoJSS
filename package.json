@@ -1,0 +1,16 @@
+{
+  "name": "cartojss",
+  "version": "0.1.0",
+  "description": "Serializer of CartoCSS javascript objects",
+  "author": "Jesús Arroyo Torrens <jarroyo@cartodb.com>",
+  "license": "GPL-2.0",
+  "dependencies": {
+    "lodash": "^4.17.4"
+  },
+  "devDependencies": {
+    "jasmine": "^2.8.0"
+  },
+  "scripts": {
+    "test": "jasmine spec/*.js"
+  }
+}

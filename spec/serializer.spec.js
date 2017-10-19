@@ -96,4 +96,15 @@ describe('serializer', function () {
 
     expect(actual).toEqual(expected);
   });
+
+  it('would serialize correctly the example 6', function () {
+    var actual = cartojss.serialize({
+      '#selector': {
+        'marker-width': 'ramp([price], (10, 20, 30), jenks())'
+      },
+    });
+    var expected = '#selector {\n  marker-width: ramp([price], (10, 20, 30), jenks());\n}';
+
+    expect(actual).toEqual(expected);
+  });
 });

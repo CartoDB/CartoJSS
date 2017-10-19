@@ -76,4 +76,24 @@ describe('serializer', function () {
 
     expect(actual).toEqual(expected);
   });
+
+  it('would serialize correctly the example 5', function () {
+    var actual = serializer.serialize({
+      '#layer': {
+        'marker-width': 3,
+        '[zoom = 4]': {
+          'marker-width': 6
+        },
+        '[zoom = 5]': {
+          'marker-width': 12
+        },
+        '[zoom > 5]': {
+          'marker-width': 16
+        },
+      },
+    });
+    var expected = '#layer {\n  marker-width: 3;\n  [zoom = 4] {\n    marker-width: 6;\n  }\n  [zoom = 5] {\n    marker-width: 12;\n  }\n  [zoom > 5] {\n    marker-width: 16;\n  }\n}';
+
+    expect(actual).toEqual(expected);
+  });
 });

@@ -62,4 +62,18 @@ describe('serializer', function () {
 
     expect(actual).toEqual(expected);
   });
+
+  it('would serialize correctly the example 4', function () {
+    var actual = serializer.serialize({
+      '#layer': {
+        '::halo': {
+          'marker-width': 20
+        },
+        'marker-width': 10
+      },
+    });
+    var expected = '#layer {\n  ::halo {\n    marker-width: 20;\n  }\n  marker-width: 10;\n}';
+
+    expect(actual).toEqual(expected);
+  });
 });

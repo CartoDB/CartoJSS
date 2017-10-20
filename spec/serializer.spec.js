@@ -107,4 +107,17 @@ describe('serializer', function () {
 
     expect(actual).toEqual(expected);
   });
+
+  it('would serialize correctly the FontSets', function () {
+    var actual = cartojss.serialize({
+      '#world': {
+        'text-name': '"[NAME]"',
+        'text-size': 11,
+        'text-face-name': '"Georgia Regular", "Arial Italic"'
+      },
+    });
+    var expected = '#world {\n  text-name: "[NAME]";\n  text-size: 11;\n  text-face-name: "Georgia Regular", "Arial Italic";\n}';
+
+    expect(actual).toEqual(expected);
+  });
 });

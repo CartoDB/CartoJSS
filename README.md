@@ -17,6 +17,11 @@ var style = {
   },
   '#selector': {
     'marker-width': 'ramp([price], (10, 20, 30), jenks())'
+  },
+  '#world': {
+    'text-name': '"[NAME]"',
+    'text-size': 11,
+    'text-face-name': '"Georgia Regular", "Arial Italic"'
   }
 }
 
@@ -34,6 +39,11 @@ cartojss.serialize(style);
 }
 #selector {
   marker-width: ramp([price], (10, 20, 30), jenks());
+}
+#world {
+  text-name: "[NAME]";
+  text-size: 11;
+  text-face-name: "Georgia Regular", "Arial Italic";
 }
 ```
 

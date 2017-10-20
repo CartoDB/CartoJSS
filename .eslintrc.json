@@ -1,1 +1,7 @@
-{}
+{
+    "extends": "semistandard",
+    "rules": {
+      "no-useless-escape": "off"
+    }
+  }
+  

@@ -46,6 +46,8 @@ cartojss.serialize(style);
 ```
 npm install
 npm test
+npm lint
+npm lint:fix
 ```
 
 

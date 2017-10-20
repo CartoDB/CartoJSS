@@ -34,7 +34,7 @@ describe('serializer', function () {
         '[continent="Antarctica"]': {
           'marker-fill': '#1F78B4'
         }
-      },
+      }
     });
     var expected = '#continent_points {\n  marker-fill-opacity: 0.9;\n  marker-line-color: #FFF;\n  marker-placement: point;\n  marker-allow-overlap: true;\n  [continent="Africa"] {\n    marker-fill: #A6CEE3;\n  }\n  [continent="Antarctica"] {\n    marker-fill: #1F78B4;\n  }\n}';
 
@@ -56,7 +56,7 @@ describe('serializer', function () {
         '[continent="Antarctica"]': {
           'marker-fill': '@antarctica'
         }
-      },
+      }
     });
     var expected = '@africa: #A6CEE3;\n@antarctica: #1F78B4;\n#continent_points {\n  marker-fill-opacity: 0.9;\n  marker-line-color: #FFF;\n  marker-placement: point;\n  marker-allow-overlap: true;\n  [continent="Africa"] {\n    marker-fill: @africa;\n  }\n  [continent="Antarctica"] {\n    marker-fill: @antarctica;\n  }\n}';
 
@@ -70,7 +70,7 @@ describe('serializer', function () {
           'marker-width': 20
         },
         'marker-width': 10
-      },
+      }
     });
     var expected = '#layer {\n  ::halo {\n    marker-width: 20;\n  }\n  marker-width: 10;\n}';
 
@@ -89,8 +89,8 @@ describe('serializer', function () {
         },
         '[zoom > 5]': {
           'marker-width': 16
-        },
-      },
+        }
+      }
     });
     var expected = '#layer {\n  marker-width: 3;\n  [zoom = 4] {\n    marker-width: 6;\n  }\n  [zoom = 5] {\n    marker-width: 12;\n  }\n  [zoom > 5] {\n    marker-width: 16;\n  }\n}';
 
@@ -101,7 +101,7 @@ describe('serializer', function () {
     var actual = cartojss.serialize({
       '#selector': {
         'marker-width': 'ramp([price], (10, 20, 30), jenks())'
-      },
+      }
     });
     var expected = '#selector {\n  marker-width: ramp([price], (10, 20, 30), jenks());\n}';
 

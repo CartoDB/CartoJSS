@@ -10,6 +10,6 @@
     "jasmine": "^2.8.0"
   },
   "scripts": {
-    "test": "jasmine spec/*.js"
+    "test": "jasmine spec/**/*.spec.js"
   }
 }

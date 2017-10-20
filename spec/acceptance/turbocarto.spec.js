@@ -1,4 +1,4 @@
-var cartojss = require('../lib/cartojss.js');
+var cartojss = require('../../lib/cartojss.js');
 
 describe('turbocarto', function () {
   it('should serialize correctly a turbocarto ramp', function () {

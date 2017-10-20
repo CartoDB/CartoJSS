@@ -1,4 +1,4 @@
-var cartojss = require('../lib/cartojss.js');
+var cartojss = require('../../lib/cartojss.js');
 
 describe('styling-concepts', function () {
   describe('attachments', function () {

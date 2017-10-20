@@ -1,4 +1,4 @@
-var cartojss = require('../lib/cartojss.js');
+var cartojss = require('../../lib/cartojss.js');
 
 describe('language-elements', function () {
   describe('color', function () {

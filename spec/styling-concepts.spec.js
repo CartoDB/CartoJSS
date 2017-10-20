@@ -182,6 +182,16 @@ describe('styling-concepts', function () {
       expect(actual).toEqual(expected);
     });
 
+    it('should serialize correctly the filter with regular expression', function () {
+      var actual = cartojss.serialize({
+        '#roads[Type=~".* Highway"]': {
+          'line-width': 5
+        }
+      });
+      var expected = '#roads[Type=~".* Highway"] {\n  line-width: 5;\n}';
+      expect(actual).toEqual(expected);
+    });
+
     it('should serialize correctly multiple filters', function () {
       var actual = cartojss.serialize({
         '#layer[zoom>=4][zoom<=10]': {

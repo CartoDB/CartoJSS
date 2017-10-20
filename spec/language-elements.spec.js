@@ -173,7 +173,15 @@ describe('language-elements', function () {
   });
 
   describe('expressions', function () {
-    //TODO
+    it('should serialize correctly the expresion [HEIGHT_FIELD] * 10', function () {
+      var actual = cartojss.serialize({
+        '#markers': {
+          'building-height': '[HEIGHT_FIELD] * 10'
+        }
+      });
+      var expected = '#markers {\n  building-height: [HEIGHT_FIELD] * 10;\n}';
+      expect(actual).toEqual(expected);
+    });
   });
 
   describe('numbers', function () {
@@ -214,10 +222,30 @@ describe('language-elements', function () {
     it('should serialize correctly the function scale(2, 2)', function () {
       var actual = cartojss.serialize({
         '#world': {
-          'polygon-opacity': '50%'
+          'polygon-opacity': 'scale(2, 2)'
         }
       });
-      var expected = '#world {\n  polygon-opacity: 50%;\n}';
+      var expected = '#world {\n  polygon-opacity: scale(2, 2);\n}';
+      expect(actual).toEqual(expected);
+    });
+
+    it('should serialize correctly multiple functions as array', function () {
+      var actual = cartojss.serialize({
+        '#layer': {
+          'marker-transform': ['rotate[degrees]', 'transform(-5,5)']
+        }
+      });
+      var expected = '#layer {\n  marker-transform: rotate[degrees], transform(-5,5);\n}';
+      expect(actual).toEqual(expected);
+    });
+
+    it('should serialize correctly multiple functions as string', function () {
+      var actual = cartojss.serialize({
+        '#layer': {
+          'marker-transform': 'rotate[degrees], transform(-5,5)'
+        }
+      });
+      var expected = '#layer {\n  marker-transform: rotate[degrees], transform(-5,5);\n}';
       expect(actual).toEqual(expected);
     });
   });

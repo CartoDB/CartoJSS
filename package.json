@@ -4,7 +4,7 @@
   "description": "Serializer of CartoCSS javascript objects",
   "main": "lib/cartojss.js",
   "author": "Jesús Arroyo Torrens <jarroyo@cartodb.com>",
-  "repository": "https://github.com/Jesus89/CartoJSS",
+  "repository": "https://github.com/CartoDB/CartoJSS",
   "license": "GPL-2.0",
   "devDependencies": {
     "eslint": "^4.9.0",

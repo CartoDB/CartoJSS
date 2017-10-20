@@ -2,8 +2,6 @@
 
 [![js-semistandard-style](https://img.shields.io/badge/code%20style-semistandard-brightgreen.svg?style=flat-square)](https://github.com/Flet/semistandard)
 
-
-
 Write [CartoCSS](https://carto.com/docs/carto-engine/cartocss) and [Turbocarto ramps](https://github.com/CartoDB/turbo-carto) using a JavaScript object
 
 ## Usage
@@ -15,12 +13,19 @@ var style = {
   '@large': 6,
   '#layer': {
     'marker-width': '@small',
+    'marker-allow-overlap': true,
     '[zoom = 4]': {
       'marker-width': '@large'
     }
   },
   '#selector': {
+    'line-dasharray': [1, 4, 2],
     'marker-width': 'ramp([price], (10, 20, 30), jenks())'
+  },
+  '#world': {
+    'text-name': '"[NAME]"',
+    'text-size': 11,
+    'text-face-name': ['"Georgia Regular"', '"Arial Italic"']
   }
 }
 
@@ -32,12 +37,19 @@ cartojss.serialize(style);
 @large: 6;
 #layer {
   marker-width: @small;
+  marker-allow-overlap: true;
   [zoom = 4] {
     marker-width: @large;
   }
 }
 #selector {
+  line-dasharray: 1, 4, 2;
   marker-width: ramp([price], (10, 20, 30), jenks());
+}
+#world {
+  text-name: "[NAME]";
+  text-size: 11;
+  text-face-name: "Georgia Regular", "Arial Italic";
 }
 ```
 
@@ -46,8 +58,6 @@ cartojss.serialize(style);
 ```
 npm install
 npm test
-npm lint
-npm lint:fix
 ```
 
 

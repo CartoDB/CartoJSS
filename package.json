@@ -4,11 +4,8 @@
   "description": "Serializer of CartoCSS javascript objects",
   "main": "lib/cartojss.js",
   "author": "Jesús Arroyo Torrens <jarroyo@cartodb.com>",
-  "repository": "https://github.com/Jesus89/CartoJSS",
+  "repository": "https://github.com/CartoDB/CartoJSS",
   "license": "GPL-2.0",
-  "dependencies": {
-    "lodash": "^4.17.4"
-  },
   "devDependencies": {
     "eslint": "^4.9.0",
     "eslint-config-semistandard": "^11.0.0",
@@ -21,7 +18,7 @@
     "jasmine": "^2.8.0"
   },
   "scripts": {
-    "test": "jasmine spec/*.js",
+    "test": "jasmine spec/**/*.spec.js",
     "lint": "eslint lib spec",
     "lint:fix": "eslint --fix lib spec"
   }

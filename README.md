@@ -2,7 +2,7 @@
 
 [![js-semistandard-style](https://img.shields.io/badge/code%20style-semistandard-brightgreen.svg?style=flat-square)](https://github.com/Flet/semistandard)
 
-Write [CartoCSS](https://carto.com/docs/carto-engine/cartocss) and [Turbocarto ramps](https://github.com/CartoDB/turbo-carto) using a JavaScript object
+Generate [CartoCSS](https://carto.com/docs/carto-engine/cartocss) and [Turbocarto ramps](https://github.com/CartoDB/turbo-carto) from a JavaScript object
 
 ## Usage
 ```javascript
@@ -29,7 +29,7 @@ var style = {
   }
 }
 
-cartojss.serialize(style);
+cartojss.serialize(style, { pretty: true });
 ```
 
 ```
@@ -52,6 +52,14 @@ cartojss.serialize(style);
   text-face-name: "Georgia Regular", "Arial Italic";
 }
 ```
+
+## Options
+
+#### pretty
+Type: `Boolean`<br>
+Default: `false`
+
+Serialize pretty CartoCSS
 
 ## Developer
 

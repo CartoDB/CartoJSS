@@ -8,7 +8,7 @@ describe('styling-concepts', function () {
           'line-color': '#fff',
           'line-width': 3
         }
-      });
+      }, { pretty: true });
       var expected = '#world {\n  line-color: #fff;\n  line-width: 3;\n}';
       expect(actual).toEqual(expected);
     });
@@ -19,7 +19,7 @@ describe('styling-concepts', function () {
           'line-color': '#fff',
           'line-width': 3
         }
-      });
+      }, { pretty: true });
       var expected = '#world::outline {\n  line-color: #fff;\n  line-width: 3;\n}';
       expect(actual).toEqual(expected);
     });
@@ -34,7 +34,7 @@ describe('styling-concepts', function () {
           'line-width': 4,
           'line-color': '#666'
         }
-      });
+      }, { pretty: true });
       var expected = '#roads {\n  casing/line-width: 6;\n  casing/line-color: #333;\n  line-width: 4;\n  line-color: #666;\n}';
       expect(actual).toEqual(expected);
     });
@@ -51,7 +51,7 @@ describe('styling-concepts', function () {
           'polygon-fill': '@mybackground + #222',
           'line-color': 'darken(@mybackground, 10%)'
         }
-      });
+      }, { pretty: true });
       var expected = '@mybackground: #2B4D2D;\nMap {\n  background-color: @mybackground;\n}\n#world {\n  polygon-fill: @mybackground + #222;\n  line-color: darken(@mybackground, 10%);\n}';
       expect(actual).toEqual(expected);
     });
@@ -72,7 +72,7 @@ describe('styling-concepts', function () {
             'marker-fill': '@antarctica'
           }
         }
-      });
+      }, { pretty: true });
       var expected = '@africa: #A6CEE3;\n@antarctica: #1F78B4;\n#continent_points {\n  marker-fill-opacity: 0.9;\n  marker-line-color: #FFF;\n  marker-placement: point;\n  marker-allow-overlap: true;\n  [continent="Africa"] {\n    marker-fill: @africa;\n  }\n  [continent="Antarctica"] {\n    marker-fill: @antarctica;\n  }\n}';
       expect(actual).toEqual(expected);
     });
@@ -89,7 +89,7 @@ describe('styling-concepts', function () {
             'polygon-fill': '#000'
           }
         }
-      });
+      }, { pretty: true });
       var expected = '.land {\n  line-color: #ccc;\n  line-width: 0.5;\n  polygon-fill: #eee;\n  #lakes {\n    polygon-fill: #000;\n  }\n}';
       expect(actual).toEqual(expected);
     });
@@ -102,7 +102,7 @@ describe('styling-concepts', function () {
           },
           'marker-width': 10
         }
-      });
+      }, { pretty: true });
       var expected = '#layer {\n  ::halo {\n    marker-width: 20;\n  }\n  marker-width: 10;\n}';
       expect(actual).toEqual(expected);
     });
@@ -121,7 +121,7 @@ describe('styling-concepts', function () {
             'marker-fill': '#1F78B4'
           }
         }
-      });
+      }, { pretty: true });
       var expected = '#continent_points {\n  marker-fill-opacity: 0.9;\n  marker-line-color: #FFF;\n  marker-placement: point;\n  marker-allow-overlap: true;\n  [continent="Africa"] {\n    marker-fill: #A6CEE3;\n  }\n  [continent="Antarctica"] {\n    marker-fill: #1F78B4;\n  }\n}';
       expect(actual).toEqual(expected);
     });
@@ -135,7 +135,7 @@ describe('styling-concepts', function () {
           'text-size': 11,
           'text-face-name': ['"Georgia Regular"', '"Arial Italic"']
         }
-      });
+      }, { pretty: true });
       var expected = '#world {\n  text-name: "[NAME]";\n  text-size: 11;\n  text-face-name: "Georgia Regular", "Arial Italic";\n}';
       expect(actual).toEqual(expected);
     });
@@ -147,7 +147,7 @@ describe('styling-concepts', function () {
           'text-size': 11,
           'text-face-name': '"Georgia Regular", "Arial Italic"'
         }
-      });
+      }, { pretty: true });
       var expected = '#world {\n  text-name: "[NAME]";\n  text-size: 11;\n  text-face-name: "Georgia Regular", "Arial Italic";\n}';
       expect(actual).toEqual(expected);
     });
@@ -162,7 +162,7 @@ describe('styling-concepts', function () {
         '#world[population > 100]': {
           'marker-color': 'red'
         }
-      });
+      }, { pretty: true });
       var expected = '#world {\n  marker-color: blue;\n}\n#world[population > 100] {\n  marker-color: red;\n}';
       expect(actual).toEqual(expected);
     });
@@ -175,7 +175,7 @@ describe('styling-concepts', function () {
             'marker-color': 'red'
           }
         }
-      });
+      }, { pretty: true });
       var expected = '#world {\n  marker-color: blue;\n  [population > 100] {\n    marker-color: red;\n  }\n}';
       expect(actual).toEqual(expected);
     });
@@ -185,7 +185,7 @@ describe('styling-concepts', function () {
         '#roads[Type=~".* Highway"]': {
           'line-width': 5
         }
-      });
+      }, { pretty: true });
       var expected = '#roads[Type=~".* Highway"] {\n  line-width: 5;\n}';
       expect(actual).toEqual(expected);
     });
@@ -204,7 +204,7 @@ describe('styling-concepts', function () {
             'line-width': 5
           }
         }
-      });
+      }, { pretty: true });
       var expected = '#layer[zoom>=4][zoom<=10] {\n  line-width: 2;\n  [zoom=8] {\n    line-width: 3;\n  }\n  [zoom=9] {\n    line-width: 4;\n  }\n  [zoom=10] {\n    line-width: 5;\n  }\n}';
       expect(actual).toEqual(expected);
     });

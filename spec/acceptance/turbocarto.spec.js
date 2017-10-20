@@ -6,7 +6,7 @@ describe('turbocarto', function () {
       '#selector': {
         'marker-width': 'ramp([price], (10, 20, 30), jenks())'
       }
-    });
+    }, { pretty: true });
     var expected = '#selector {\n  marker-width: ramp([price], (10, 20, 30), jenks());\n}';
     expect(actual).toEqual(expected);
   });

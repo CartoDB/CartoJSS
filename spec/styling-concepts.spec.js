@@ -1,7 +1,6 @@
 var cartojss = require('../lib/cartojss.js');
 
 describe('styling-concepts', function () {
-
   describe('attachments', function () {
     it('should serialize correctly the attachment #world', function () {
       var actual = cartojss.serialize({
@@ -72,7 +71,7 @@ describe('styling-concepts', function () {
           '[continent="Antarctica"]': {
             'marker-fill': '@antarctica'
           }
-        },
+        }
       });
       var expected = '@africa: #A6CEE3;\n@antarctica: #1F78B4;\n#continent_points {\n  marker-fill-opacity: 0.9;\n  marker-line-color: #FFF;\n  marker-placement: point;\n  marker-allow-overlap: true;\n  [continent="Africa"] {\n    marker-fill: @africa;\n  }\n  [continent="Antarctica"] {\n    marker-fill: @antarctica;\n  }\n}';
       expect(actual).toEqual(expected);
@@ -102,7 +101,7 @@ describe('styling-concepts', function () {
             'marker-width': 20
           },
           'marker-width': 10
-        },
+        }
       });
       var expected = '#layer {\n  ::halo {\n    marker-width: 20;\n  }\n  marker-width: 10;\n}';
       expect(actual).toEqual(expected);
@@ -121,7 +120,7 @@ describe('styling-concepts', function () {
           '[continent="Antarctica"]': {
             'marker-fill': '#1F78B4'
           }
-        },
+        }
       });
       var expected = '#continent_points {\n  marker-fill-opacity: 0.9;\n  marker-line-color: #FFF;\n  marker-placement: point;\n  marker-allow-overlap: true;\n  [continent="Africa"] {\n    marker-fill: #A6CEE3;\n  }\n  [continent="Antarctica"] {\n    marker-fill: #1F78B4;\n  }\n}';
       expect(actual).toEqual(expected);
@@ -135,7 +134,7 @@ describe('styling-concepts', function () {
           'text-name': '"[NAME]"',
           'text-size': 11,
           'text-face-name': ['"Georgia Regular"', '"Arial Italic"']
-        },
+        }
       });
       var expected = '#world {\n  text-name: "[NAME]";\n  text-size: 11;\n  text-face-name: "Georgia Regular", "Arial Italic";\n}';
       expect(actual).toEqual(expected);
@@ -147,7 +146,7 @@ describe('styling-concepts', function () {
           'text-name': '"[NAME]"',
           'text-size': 11,
           'text-face-name': '"Georgia Regular", "Arial Italic"'
-        },
+        }
       });
       var expected = '#world {\n  text-name: "[NAME]";\n  text-size: 11;\n  text-face-name: "Georgia Regular", "Arial Italic";\n}';
       expect(actual).toEqual(expected);
@@ -155,7 +154,6 @@ describe('styling-concepts', function () {
   });
 
   describe('filters', function () {
-
     it('should serialize correctly the filter #world[population > 100]', function () {
       var actual = cartojss.serialize({
         '#world': {
@@ -197,20 +195,18 @@ describe('styling-concepts', function () {
         '#layer[zoom>=4][zoom<=10]': {
           'line-width': 2,
           '[zoom=8]': {
-            'line-width': 3,
+            'line-width': 3
           },
           '[zoom=9]': {
-            'line-width': 4,
+            'line-width': 4
           },
           '[zoom=10]': {
-            'line-width': 5,
+            'line-width': 5
           }
         }
       });
       var expected = '#layer[zoom>=4][zoom<=10] {\n  line-width: 2;\n  [zoom=8] {\n    line-width: 3;\n  }\n  [zoom=9] {\n    line-width: 4;\n  }\n  [zoom=10] {\n    line-width: 5;\n  }\n}';
       expect(actual).toEqual(expected);
     });
-
   });
-
 });

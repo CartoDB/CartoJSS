@@ -7,9 +7,19 @@
   "repository": "https://github.com/Jesus89/CartoJSS",
   "license": "GPL-2.0",
   "devDependencies": {
+    "eslint": "^4.9.0",
+    "eslint-config-semistandard": "^11.0.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-node": "^5.2.0",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-react": "^7.4.0",
+    "eslint-plugin-standard": "^3.0.1",
     "jasmine": "^2.8.0"
   },
   "scripts": {
-    "test": "jasmine spec/**/*.spec.js"
+    "test": "jasmine spec/**/*.spec.js",
+    "lint": "eslint lib spec",
+    "lint:fix": "eslint --fix lib spec"
   }
 }

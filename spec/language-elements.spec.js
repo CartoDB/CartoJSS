@@ -1,7 +1,6 @@
 var cartojss = require('../lib/cartojss.js');
 
 describe('language-elements', function () {
-
   describe('color', function () {
     it('should serialize correctly the color #ff0', function () {
       var actual = cartojss.serialize({
@@ -249,5 +248,4 @@ describe('language-elements', function () {
       expect(actual).toEqual(expected);
     });
   });
-
 });

@@ -7,6 +7,12 @@
 
 Write [CartoCSS](https://carto.com/docs/carto-engine/cartocss) and [Turbocarto ramps](https://github.com/CartoDB/turbo-carto) using a JavaScript object
 
+## Install
+
+```
+npm install cartojss
+```
+
 ## Usage
 ```javascript
 var cartojss = require('cartojss');

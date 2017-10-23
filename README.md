@@ -5,7 +5,7 @@
 
 [![NPM](https://nodei.co/npm/cartojss.png?)](https://nodei.co/npm/cartojss)
 
-Write [CartoCSS](https://carto.com/docs/carto-engine/cartocss) and [Turbocarto ramps](https://github.com/CartoDB/turbo-carto) using a JavaScript object
+Generate [CartoCSS](https://carto.com/docs/carto-engine/cartocss) and [Turbocarto ramps](https://github.com/CartoDB/turbo-carto) from a JavaScript object
 
 ## Install
 
@@ -38,7 +38,7 @@ var style = {
   }
 }
 
-cartojss.serialize(style);
+cartojss.serialize(style, { pretty: true });
 ```
 
 ```
@@ -61,6 +61,14 @@ cartojss.serialize(style);
   text-face-name: "Georgia Regular", "Arial Italic";
 }
 ```
+
+## Options
+
+#### pretty
+Type: `Boolean`<br>
+Default: `false`
+
+Serialize pretty CartoCSS
 
 ## Development
 

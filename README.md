@@ -3,13 +3,9 @@
 [![Build Status](https://travis-ci.org/CartoDB/CartoJSS.svg?branch=master)](https://travis-ci.org/CartoDB/CartoJSS)
 [![js-semistandard-style](https://img.shields.io/badge/code%20style-semistandard-brightgreen.svg?style=flat-square)](https://github.com/Flet/semistandard)
 
-<<<<<<< HEAD
-Generate [CartoCSS](https://carto.com/docs/carto-engine/cartocss) and [Turbocarto ramps](https://github.com/CartoDB/turbo-carto) from a JavaScript object
-=======
 [![NPM](https://nodei.co/npm/cartojss.png?)](https://nodei.co/npm/cartojss)
 
-Write [CartoCSS](https://carto.com/docs/carto-engine/cartocss) and [Turbocarto ramps](https://github.com/CartoDB/turbo-carto) using a JavaScript object
->>>>>>> master
+Generate [CartoCSS](https://carto.com/docs/carto-engine/cartocss) and [Turbocarto ramps](https://github.com/CartoDB/turbo-carto) from a JavaScript object
 
 ## Install
 

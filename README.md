@@ -10,7 +10,7 @@ Write [CartoCSS](https://carto.com/docs/carto-engine/cartocss) and [Turbocarto r
 ## Install
 
 ```
-npm install cartojss
+$ npm install cartojss
 ```
 
 ## Usage
@@ -62,7 +62,7 @@ cartojss.serialize(style);
 }
 ```
 
-## Developer
+## Development
 
 ```
 npm install

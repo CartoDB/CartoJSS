@@ -73,8 +73,8 @@ Serialize pretty CartoCSS
 ## Development
 
 ```
-npm install
-npm test
+yarn
+yarn test
 ```
 
 ### Publish

@@ -1,4 +1,5 @@
 const path = require('path');
+const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
   entry: './lib/cartojss.js',
@@ -7,5 +8,10 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     library: 'cartojss',
     libraryTarget: 'umd'
-  }
+  },
+  plugins: [
+    new UglifyJSPlugin({
+      sourceMap: false
+    })
+  ]
 };

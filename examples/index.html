@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="../dist/cartojss.js"></script>
+  <title>CartoJSS Example</title>
+</head>
+
+<body>
+  <script>
+    var style = {
+      '#layer': {
+        'marker-with': 10,
+        'marker-color': 'red'
+      }
+    };
+
+    console.log(cartojss.serialize(style));
+  </script>
+</body>
+
+</html>

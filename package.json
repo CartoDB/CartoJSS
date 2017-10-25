@@ -1,6 +1,6 @@
 {
   "name": "cartojss",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Serializer of CartoCSS javascript objects",
   "main": "dist/cartojss.js",
   "author": {

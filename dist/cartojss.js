@@ -4,9 +4,9 @@
 	else if(typeof define === 'function' && define.amd)
 		define([], factory);
 	else if(typeof exports === 'object')
-		exports["CartoJSS"] = factory();
+		exports["cartojss"] = factory();
 	else
-		root["CartoJSS"] = factory();
+		root["cartojss"] = factory();
 })(this, function() {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache

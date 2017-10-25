@@ -5,7 +5,7 @@ module.exports = {
   output: {
     filename: 'cartojss.js',
     path: path.resolve(__dirname, 'dist'),
-    library: 'CartoJSS',
+    library: 'cartojss',
     libraryTarget: 'umd'
   }
 };

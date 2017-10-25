@@ -1,4 +1,4 @@
-var CartoJSS = require('../dist/cartojss');
+var cartojss = require('../dist/cartojss');
 
 var style = {
   '#layer': {
@@ -7,4 +7,4 @@ var style = {
   }
 };
 
-console.log(CartoJSS.serialize(style));
+console.log(cartojss.serialize(style));
